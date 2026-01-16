@@ -344,6 +344,55 @@ main{
 
     }
 
+    section.view7{
+        width: 100%;
+        @include flex-column(1rem);
+        padding: 1rem;
+        color: #121212;
+        .content{
+            background-color: #cebd63;
+            padding: 1.5rem;
+            border-radius: 0.7rem;
+            @include flex-column(1rem);
+
+            >p{
+                text-transform: uppercase;
+                font-size: 1rem;
+                font-weight: 600;
+                opacity: 0.8;
+            }
+
+            .text{
+                @include flex-column(1rem);
+                height: 100%;
+                align-items: center;
+                justify-content: space-between;
+                h1{
+                    font-weight: 200;
+                    font-size: 2.3rem;
+                    text-transform: uppercase;
+                    line-height: 2.8rem;
+                    opacity: 0.9;
+                }
+
+                button{
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    padding: 1.3rem;
+                    border-radius: 0.7rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    background-color: black;
+                    color: white;
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+            }
+        }
+
+    }
+
 }
 
 section{
@@ -351,7 +400,7 @@ section{
 }
 
 
-@media (min-width:600px){
+@media (min-width:900px){
     main{
         section.view1{
             flex-direction: row;
@@ -462,11 +511,35 @@ section{
 
         section.view6{
             flex-direction: row;
+            padding: 0.5rem 3rem;
             .top,.bottom{
                 width: 50%;
             }
             .content{
                 justify-content: space-between;
+            }
+        }
+
+        section.view7{
+            padding: 0.5rem 3rem;
+            .content{
+                padding: 3rem 1.5rem;
+                p{
+                    font-weight: 300;
+                }
+                .text{
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    h1{
+                        font-size: 5rem;
+                        line-height: 5rem;
+                        width: 100%;
+                    }
+                    button{
+                        width: 15rem;
+                    }
+                }
             }
         }
 
